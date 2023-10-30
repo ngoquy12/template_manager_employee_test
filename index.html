@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Logo-Rikkei.png/300px-Logo-Rikkei.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Nhân viên</title>
+  </head>
+
+  <body>
+    <div class="m-container">
+      <!-- Sidebar -->
+      <div class="m-sidebar">
+        <div class="m-logo-container">
+          <div class="m-icon-24 m-option-icon"></div>
+          <img
+            class="m-logo-icon"
+            src="https://rikkei.edu.vn/wp-content/uploads/2022/04/Logo-Rikkei.png"
+            alt="Logo"
+          />
+        </div>
+        <div class="m-sidebar-item">
+          <div class="m-tooltip-content">
+            <a href="#" class="m-item-router">
+              <i class="m-mr-12 fa-solid fa-gauge"></i>
+              <div class="m-item-title">Tổng quan</div>
+            </a>
+          </div>
+          <div class="m-tooltip-content">
+            <a href="#" class="m-item-router active">
+              <i class="m-mr-12 fa-solid fa-user"></i>
+              <div class="m-item-title">Tài khoản</div>
+            </a>
+          </div>
+          <div class="m-tooltip-content">
+            <a href="#" class="m-item-router">
+              <i class="m-mr-12 fa-solid fa-money-bill"></i>
+              <div class="m-item-title">Lương</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Main -->
+      <div class="m-content">
+        <!-- Navbar -->
+        <div class="m-navbar">
+          <div class="m-navbar-left">
+            <div class="m-navbar-icon m-icon-24 m-icon-three-stripes"></div>
+            <div class="m-navbar-branch">
+              <div class="m-branch-name">CÔNG TY CỔ PHẦN RIKKEI ACADEMY</div>
+            </div>
+            <div class="m-navbar-icon m-icon-14 m-icon-chevron-down-bold"></div>
+          </div>
+          <div class="m-navbar-right">
+            <div
+              class="m-navbar-icon m-icon-24 m-icon-bell"
+              title="Thông báo"
+            ></div>
+            <div class="m-navbar-user">
+              <div class="m-user-image m-navbar-icon">
+                <img src="./assets/img/default-avatar.jpg" alt="User image" />
+              </div>
+              <div class="m-user-name">Ngọ Văn Quý</div>
+              <div class="m-navbar-icon m-icon-14 m-icon-chevron-down"></div>
+            </div>
+          </div>
+        </div>
+        <div class="m-main-content">
+          <div class="m-content-header">
+            <div class="m-header-title">Nhân viên</div>
+            <button class="m-button">
+              <div class="m-btn-text">Thêm mới nhân viên</div>
+            </button>
+          </div>
+          <!-- Content body -->
+          <div class="m-content-body">
+            <!-- Toolbar -->
+            <div class="m-body-toolbar">
+              <div class="m-search-area">
+                <input
+                  class="m-input"
+                  type="text"
+                  placeholder="Tìm theo mã, tên nhân viên"
+                />
+                <div class="m-icon-20 m-icon-search"></div>
+              </div>
+              <div class="m-refresh-button m-icon-24 m-icon-refresh"></div>
+            </div>
+            <!-- Table -->
+            <div class="m-body-table">
+              <table class="m-table">
+                <thead class="m-thead">
+                  <tr class="m-tr">
+                    <th class="m-th m-checkall">
+                      <label class="m-table-checkbox">
+                        <input type="checkbox" />
+                      </label>
+                    </th>
+                    <th class="m-th" style="min-width: 140px">
+                      <div class="m-th-title">Mã nhân viên</div>
+                    </th>
+                    <th class="m-th" style="min-width: 200px">
+                      <div class="m-th-title">Tên nhân viên</div>
+                    </th>
+                    <th class="m-th" style="min-width: 120px">
+                      <div class="m-th-title">Giới tính</div>
+                    </th>
+                    <th class="m-th m-th-dob" style="min-width: 155px">
+                      <div class="m-th-title">Ngày sinh</div>
+                    </th>
+                    <th class="m-th" style="min-width: 150px">
+                      <div class="m-th-title" title="Số chứng minh nhân dân">
+                        Số CMND
+                      </div>
+                    </th>
+                    <th class="m-th" style="min-width: 140px">
+                      <div class="m-th-title">Chức danh</div>
+                    </th>
+                    <th class="m-th" style="min-width: 250px">
+                      <div class="m-th-title">Tên đơn vị</div>
+                    </th>
+                    <th class="m-th" style="min-width: 150px">
+                      <div class="m-th-title">Số tài khoản</div>
+                    </th>
+                    <th class="m-th" style="min-width: 250px">
+                      <div class="m-th-title">Tên ngân hàng</div>
+                    </th>
+                    <th class="m-th" style="min-width: 250px">
+                      <div
+                        class="m-th-title"
+                        title="Chi nhánh tài khoản ngân hàng"
+                      >
+                        Chi nhánh TK ngân hàng
+                      </div>
+                    </th>
+                    <th class="m-th m-th-widget" style="min-width: 120px">
+                      <div class="m-th-title">Chức năng</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="m-tbody">
+                  <!-- Nhập dữ liệu cho bảng -->
+                  <tr class="m-tr">
+                    <td class="m-td m-td-multi">
+                      <label class="m-table-checkbox">
+                        <input type="checkbox" />
+                      </label>
+                    </td>
+                    <td class="m-td">NV001</td>
+                    <td class="m-td">Ngọ Văn Quý</td>
+                    <td class="m-td">Nam</td>
+                    <td class="m-td" style="text-align: center">28-06-2001</td>
+                    <td class="m-td">012345678</td>
+                    <td class="m-td">Trưởng phòng</td>
+                    <td class="m-td">Phòng nhân sự</td>
+                    <td class="m-td">0123456</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td m-td-widget">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-trash"></i>
+                    </td>
+                  </tr>
+                  <!-- Nhập dữ liệu cho bảng -->
+                  <tr class="m-tr">
+                    <td class="m-td m-td-multi">
+                      <label class="m-table-checkbox">
+                        <input type="checkbox" />
+                      </label>
+                    </td>
+                    <td class="m-td">NV001</td>
+                    <td class="m-td">Ngọ Văn Quý</td>
+                    <td class="m-td">Nam</td>
+                    <td class="m-td" style="text-align: center">28-06-2001</td>
+                    <td class="m-td">012345678</td>
+                    <td class="m-td">Trưởng phòng</td>
+                    <td class="m-td">Phòng nhân sự</td>
+                    <td class="m-td">0123456</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td m-td-widget">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-trash"></i>
+                    </td>
+                  </tr>
+                  <!-- Nhập dữ liệu cho bảng -->
+                  <tr class="m-tr">
+                    <td class="m-td m-td-multi">
+                      <label class="m-table-checkbox">
+                        <input type="checkbox" />
+                      </label>
+                    </td>
+                    <td class="m-td">NV001</td>
+                    <td class="m-td">Ngọ Văn Quý</td>
+                    <td class="m-td">Nam</td>
+                    <td class="m-td" style="text-align: center">28-06-2001</td>
+                    <td class="m-td">012345678</td>
+                    <td class="m-td">Trưởng phòng</td>
+                    <td class="m-td">Phòng nhân sự</td>
+                    <td class="m-td">0123456</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td m-td-widget">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-trash"></i>
+                    </td>
+                  </tr>
+                  <!-- Nhập dữ liệu cho bảng -->
+                  <tr class="m-tr">
+                    <td class="m-td m-td-multi">
+                      <label class="m-table-checkbox">
+                        <input type="checkbox" />
+                      </label>
+                    </td>
+                    <td class="m-td">NV001</td>
+                    <td class="m-td">Ngọ Văn Quý</td>
+                    <td class="m-td">Nam</td>
+                    <td class="m-td" style="text-align: center">28-06-2001</td>
+                    <td class="m-td">012345678</td>
+                    <td class="m-td">Trưởng phòng</td>
+                    <td class="m-td">Phòng nhân sự</td>
+                    <td class="m-td">0123456</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td m-td-widget">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-trash"></i>
+                    </td>
+                  </tr>
+                  <!-- Nhập dữ liệu cho bảng -->
+                  <tr class="m-tr">
+                    <td class="m-td m-td-multi">
+                      <label class="m-table-checkbox">
+                        <input type="checkbox" />
+                      </label>
+                    </td>
+                    <td class="m-td">NV001</td>
+                    <td class="m-td">Ngọ Văn Quý</td>
+                    <td class="m-td">Nam</td>
+                    <td class="m-td" style="text-align: center">28-06-2001</td>
+                    <td class="m-td">012345678</td>
+                    <td class="m-td">Trưởng phòng</td>
+                    <td class="m-td">Phòng nhân sự</td>
+                    <td class="m-td">0123456</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td m-td-widget">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-trash"></i>
+                    </td>
+                  </tr>
+                  <!-- Nhập dữ liệu cho bảng -->
+                  <tr class="m-tr">
+                    <td class="m-td m-td-multi">
+                      <label class="m-table-checkbox">
+                        <input type="checkbox" />
+                      </label>
+                    </td>
+                    <td class="m-td">NV001</td>
+                    <td class="m-td">Ngọ Văn Quý</td>
+                    <td class="m-td">Nam</td>
+                    <td class="m-td" style="text-align: center">28-06-2001</td>
+                    <td class="m-td">012345678</td>
+                    <td class="m-td">Trưởng phòng</td>
+                    <td class="m-td">Phòng nhân sự</td>
+                    <td class="m-td">0123456</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td m-td-widget">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-trash"></i>
+                    </td>
+                  </tr>
+                  <!-- Nhập dữ liệu cho bảng -->
+                  <tr class="m-tr">
+                    <td class="m-td m-td-multi">
+                      <label class="m-table-checkbox">
+                        <input type="checkbox" />
+                      </label>
+                    </td>
+                    <td class="m-td">NV001</td>
+                    <td class="m-td">Ngọ Văn Quý</td>
+                    <td class="m-td">Nam</td>
+                    <td class="m-td" style="text-align: center">28-06-2001</td>
+                    <td class="m-td">012345678</td>
+                    <td class="m-td">Trưởng phòng</td>
+                    <td class="m-td">Phòng nhân sự</td>
+                    <td class="m-td">0123456</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td m-td-widget">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-trash"></i>
+                    </td>
+                  </tr>
+                  <!-- Nhập dữ liệu cho bảng -->
+                  <tr class="m-tr">
+                    <td class="m-td m-td-multi">
+                      <label class="m-table-checkbox">
+                        <input type="checkbox" />
+                      </label>
+                    </td>
+                    <td class="m-td">NV001</td>
+                    <td class="m-td">Ngọ Văn Quý</td>
+                    <td class="m-td">Nam</td>
+                    <td class="m-td" style="text-align: center">28-06-2001</td>
+                    <td class="m-td">012345678</td>
+                    <td class="m-td">Trưởng phòng</td>
+                    <td class="m-td">Phòng nhân sự</td>
+                    <td class="m-td">0123456</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td m-td-widget">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-trash"></i>
+                    </td>
+                  </tr>
+                  <!-- Nhập dữ liệu cho bảng -->
+                  <tr class="m-tr">
+                    <td class="m-td m-td-multi">
+                      <label class="m-table-checkbox">
+                        <input type="checkbox" />
+                      </label>
+                    </td>
+                    <td class="m-td">NV001</td>
+                    <td class="m-td">Ngọ Văn Quý</td>
+                    <td class="m-td">Nam</td>
+                    <td class="m-td" style="text-align: center">28-06-2001</td>
+                    <td class="m-td">012345678</td>
+                    <td class="m-td">Trưởng phòng</td>
+                    <td class="m-td">Phòng nhân sự</td>
+                    <td class="m-td">0123456</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td">Thanh Xuân, Hà Nội</td>
+                    <td class="m-td m-td-widget">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-trash"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Thanh phân trang -->
+            <div class="m-pagination">
+              <div class="m-pagination-left">
+                <div class="m-total-record">
+                  Tổng số: <b class="m-total">20</b> bản ghi
+                </div>
+              </div>
+              <div class="m-pagination-right">
+                <div class="m-record-in-page">
+                  <div class="m-combo-box">
+                    <select class="m-combo-main-content">
+                      <option value="">10 bản ghi trên một trang</option>
+                      <option value="">20 bản ghi trên một trang</option>
+                      <option value="">30 bản ghi trên một trang</option>
+                      <option value="">50 bản ghi trên một trang</option>
+                      <option value="">100 bản ghi trên một trang</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="m-page-number">
+                  <div class="m-prev-page">Trước</div>
+                  <div class="m-page-index m-selected">1</div>
+                  <div class="m-page-index">2</div>
+                  <div class="m-page-index">3</div>
+                  <div class="m-next-page">Sau</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Form chi tiết nhân viên -->
+    <div class="m-popup" hidden>
+      <div class="m-popup-con">
+        <div class="m-popup-background"></div>
+        <div class="m-popup-drag">
+          <div class="m-popup m-popup-content">
+            <div class="m-popup-header">
+              <div class="m-popup-title">
+                <div class="m-title m-title-content">Thông tin nhân viên</div>
+              </div>
+              <div class="m-popup-close">
+                <div class="m-icon-24 m-icon-close m-close-add-popup"></div>
+              </div>
+            </div>
+            <div class="m-popup--content">
+              <form action="">
+                <div class="m-content-2-col">
+                  <div class="m-col-1 m-flex-wrap">
+                    <div class="m-input-40 m-pr-6 m-pb-24">
+                      <div class="m-flex">
+                        <div class="m-input-title">Mã</div>
+                        <div class="m-input-title-require">&nbsp;*</div>
+                      </div>
+                      <input type="text" class="m-input" tabindex="1" />
+                    </div>
+                    <div class="m-input-60 m-pb-24">
+                      <div class="m-flex">
+                        <div class="m-input-title">Tên</div>
+                        <div class="m-input-title-require">&nbsp;*</div>
+                      </div>
+                      <input
+                        type="text"
+                        class="m-input m-input-require"
+                        tabindex="2"
+                      />
+                    </div>
+                    <div class="m-input-100 m-pb-24">
+                      <div class="m-flex">
+                        <div class="m-input-title">Đơn vị</div>
+                        <div class="m-input-title-require">&nbsp;*</div>
+                      </div>
+                      <div class="m-combo-box">
+                        <select class="m-input">
+                          <option value="">Giám đốc</option>
+                          <option value="">Trưởng phòng</option>
+                          <option value="">Nhân viên</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="m-input-100 m-pb-24">
+                      <div class="m-flex-wrap">
+                        <div class="m-input-title">Chức danh</div>
+                      </div>
+                      <input type="text" class="m-input" tabindex="10" />
+                    </div>
+                  </div>
+                  <div class="m-col-2 m-flex-wrap">
+                    <div class="m-input-40 m-pr-6 m-pb-24">
+                      <div class="m-flex-wrap">
+                        <div class="m-input-title">Ngày sinh</div>
+                      </div>
+                      <input type="date" class="m-input" tabindex="3" />
+                    </div>
+                    <div class="m-input-60 m-pb-24">
+                      <div class="m-flex-wrap">
+                        <div class="m-input-title m-input-title-gender">
+                          Giới tính
+                        </div>
+                      </div>
+                      <div class="m-radio-group">
+                        <label class="m-con-radio">
+                          <input
+                            type="radio"
+                            value="0"
+                            name="Gender"
+                            checked
+                            tabindex="4"
+                          />
+                          <span class="m-radio-label">Nam</span>
+                        </label>
+                        <label class="m-con-radio">
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Gender"
+                            tabindex="5"
+                          />
+                          <span class="m-radio-label">Nữ</span>
+                        </label>
+                        <label class="m-con-radio">
+                          <input
+                            type="radio"
+                            value="2"
+                            name="Gender"
+                            tabindex="6"
+                          />
+                          <span class="m-radio-label">Khác</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="m-input-60 m-pr-6 m-pb-24">
+                      <div class="m-flex-wrap">
+                        <div
+                          class="m-input-title"
+                          title="Số chứng minh nhân dân"
+                        >
+                          Email
+                        </div>
+                      </div>
+                      <input type="text" class="m-input" tabindex="8" />
+                    </div>
+                    <div class="m-input-40 m-pb-24">
+                      <div class="m-flex-wrap">
+                        <div class="m-input-title">Mật khẩu</div>
+                      </div>
+                      <input type="password" class="m-input" tabindex="9" />
+                    </div>
+                    <div class="m-input-100 m-pb-24">
+                      <div class="m-flex-wrap">
+                        <label class="m-input-title">Hình ảnh</label>
+                      </div>
+                      <input type="file" class="m-input" tabindex="11" />
+                    </div>
+                  </div>
+                </div>
+                <div class="m-content-1-col m-pb-24">
+                  <div class="m-input-100">
+                    <div class="m-flex-wrap">
+                      <div class="m-input-title">Địa chỉ</div>
+                    </div>
+                    <input type="text" class="m-input" tabindex="12" />
+                  </div>
+                </div>
+              </form>
+              <div class="m-popup--footer">
+                <div class="m-divine"></div>
+                <div class="m-popup-btn">
+                  <div class="m-popup-btn-left">
+                    <button class="m-button m-button-secondary" tabindex="20">
+                      <div class="m-btn-text">Hủy</div>
+                    </button>
+                  </div>
+                  <div class="m-popup-btn-right">
+                    <button class="m-button" tabindex="19">
+                      <div class="m-btn-text">Lưu</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Danger Dialog -->
+    <div class="m-dialog m-employee-danger">
+      <div class="m-dialog-box">
+        <div class="m-dialog-center">
+          <div class="m-dialog-background"></div>
+          <div class="m-dialog-drag">
+            <div class="m-dialog-message">
+              <div class="m-dialog-content">
+                <div class="m-content-icon">
+                  <div class="m-icon-48 m-icon-danger"></div>
+                </div>
+                <div class="m-content-message">Tên không được để trống.</div>
+              </div>
+              <div class="m-dialog-line"></div>
+              <div class="m-dialog-footer">
+                <button class="m-button" tabindex="1">
+                  <div class="m-btn-text">Đóng</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Warning dialog -->
+    <div class="m-dialog m-delete-warning">
+      <div class="m-dialog-box">
+        <div class="m-dialog-center">
+          <div class="m-dialog-background"></div>
+          <div class="m-dialog-drag">
+            <div class="m-dialog-message">
+              <div class="m-dialog-content">
+                <div class="m-content-icon">
+                  <div class="m-icon-48 m-icon-warning"></div>
+                </div>
+                <div class="m-content-message">
+                  Bạn có thực sự muốn xóa Nhân viên &lt;000579&gt; không?
+                </div>
+              </div>
+              <div class="m-dialog-line"></div>
+              <div class="m-dialog-footer">
+                <button class="m-button m-button-secondary" tabindex="2">
+                  <div class="m-btn-text">Không</div>
+                </button>
+                <button class="m-button" tabindex="1">
+                  <div class="m-btn-text">Có</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Warning dialog -->
+    <div class="m-dialog m-delete-warning">
+      <div class="m-dialog-box">
+        <div class="m-dialog-center">
+          <div class="m-dialog-background"></div>
+          <div class="m-dialog-drag">
+            <div class="m-dialog-message">
+              <div class="m-dialog-content">
+                <div class="m-content-icon">
+                  <div class="m-icon-48 m-icon-warning"></div>
+                </div>
+                <div class="m-content-message">
+                  Mã nhân viên &lt;NV001&gt; đã tồn taị trong hệ thống. Vui lòng
+                  kiểm tra lại.
+                </div>
+              </div>
+              <div class="m-dialog-line"></div>
+              <div
+                class="m-dialog-footer"
+                style="display: flex; justify-content: flex-end"
+              >
+                <button class="m-button" tabindex="1">
+                  <div class="m-btn-text">Đồng ý</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Question dialog -->
+    <div class="m-dialog m-employee-question">
+      <div class="m-dialog-box">
+        <div class="m-dialog-center">
+          <div class="m-dialog-background"></div>
+          <div class="m-dialog-drag">
+            <div class="m-dialog-message">
+              <div class="m-dialog-content">
+                <div class="m-content-icon">
+                  <div class="m-icon-48 m-icon-question"></div>
+                </div>
+                <div class="m-content-message">
+                  Dữ liệu đã bị thay đổi. Bạn có muốn cất không?
+                </div>
+              </div>
+              <div class="m-dialog-line"></div>
+              <div class="m-dialog-footer">
+                <div class="m-btn-left">
+                  <button class="m-button m-button-secondary" tabindex="3">
+                    <div class="m-btn-text">Hủy</div>
+                  </button>
+                </div>
+                <div class="m-btn-right">
+                  <button class="m-button m-button-secondary" tabindex="2">
+                    <div class="m-btn-text">Không</div>
+                  </button>
+                  <button class="m-button m-ml-8" tabindex="1">
+                    <div class="m-btn-text">Cất</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Success dialog -->
+    <div class="m-dialog m-employee-success">
+      <div class="m-dialog-box">
+        <div class="m-dialog-center">
+          <div class="m-dialog-background"></div>
+          <div class="m-dialog-drag">
+            <div class="m-dialog-message">
+              <div class="m-dialog-content">
+                <div class="m-content-icon">
+                  <div class="m-icon-48 m-icon-suscess"></div>
+                </div>
+                <div class="m-content-message">Xóa thành công.</div>
+              </div>
+              <div class="m-dialog-line"></div>
+              <div class="m-dialog-footer">
+                <button class="m-button" tabindex="1">
+                  <div class="m-btn-text">Đóng</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Icon loading -->
+    <div class="m-loading-svg" hidden>
+      <div class="m-icon-loading"></div>
+    </div>
+  </body>
+</html>
